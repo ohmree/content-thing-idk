@@ -7,25 +7,25 @@
 A compose file is provided for development:
 
 ```console
-$ cp .env.local.example .env.local
-$ $EDITOR .env.local # fill out values as necessary.
-$ podman compose up # or docker.
+cp .env.local.example .env.local
+$EDITOR .env.local # fill out values as necessary.
+podman compose up # or docker.
 ```
 
-Then the Directus instance should be running.
+Then the Directus instance should be running on [`http://localhost:8055`](http://localhost:8055).
 
 ## Developing
 
 This project uses bun for managing dependencies and running npm scripts but it could easily be switched out.
 
 ```console
-$ bun dev
+bun dev
 ```
 
 Or start the server and open the app in a new browser tab:
 
 ```console
-$ bun dev --open
+bun dev --open
 ```
 
 ## Building
@@ -33,7 +33,7 @@ $ bun dev --open
 To create a production version of your app:
 
 ```console
-$ bun build
+bun build
 ```
 
 You can preview the production build with `bun preview`.
