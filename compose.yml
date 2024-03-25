@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   directus:
     image: directus/directus:10.10.4
@@ -9,10 +9,10 @@ services:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
     environment:
-      KEY: "DGBHyhlcAB4oaWxt3mYU1EmnAs159dC8nXIb8Eyg+KU="
-      SECRET: "UEhfRdPP9VfhRPlebhjRY/g+PBBfF/zTJFLAmPMHy/o="
-      ADMIN_EMAIL: "admin@example.com"
-      ADMIN_PASSWORD: "password"
-      DB_CLIENT: "sqlite3"
-      DB_FILENAME: "/directus/database/data.db"
-      WEBSOCKETS_ENABLED: "false"
+      KEY: 'DGBHyhlcAB4oaWxt3mYU1EmnAs159dC8nXIb8Eyg+KU='
+      SECRET: 'UEhfRdPP9VfhRPlebhjRY/g+PBBfF/zTJFLAmPMHy/o='
+      ADMIN_EMAIL: 'admin@example.com'
+      ADMIN_PASSWORD: 'password'
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: '/directus/database/data.db'
+      WEBSOCKETS_ENABLED: 'false'
