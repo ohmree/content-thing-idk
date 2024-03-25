@@ -1,18 +1,15 @@
 version: '3'
 services:
   directus:
-    image: directus/directus:10.10.4
-    ports:
-      - 8055:8055
-    volumes:
-      - ./database:/directus/database
-      - ./uploads:/directus/uploads
-      - ./extensions:/directus/extensions
+    image: linefusion/directus:10.10.4-node20-alpine-runtime
     environment:
-      KEY: 'DGBHyhlcAB4oaWxt3mYU1EmnAs159dC8nXIb8Eyg+KU='
-      SECRET: 'UEhfRdPP9VfhRPlebhjRY/g+PBBfF/zTJFLAmPMHy/o='
-      ADMIN_EMAIL: 'admin@example.com'
-      ADMIN_PASSWORD: 'password'
-      DB_CLIENT: 'sqlite3'
-      DB_FILENAME: '/directus/database/data.db'
-      WEBSOCKETS_ENABLED: 'false'
+      # DIRECTUS_VERSION: '10.10.4'
+      NODE_PACKAGES: |
+        directus-extension-generate-types
+      ADMIN_EMAIL: ${DIRECTUS_ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${DIRECTUS_ADMIN_PASSWORD}
+      CORS_ENABLED: 'true'
+      CORS_ORIGIN: 'true'
+
+    ports:
+      - '8055:8055'
